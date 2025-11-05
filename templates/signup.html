@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Signup - CropCast</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>🌾 CropCast Signup</h1>
+    </header>
+
+    <div class="container">
+        <form method="post">
+            <input type="text" name="username" placeholder="Choose Username" required><br>
+            <input type="password" name="password" placeholder="Choose Password" required><br>
+            <button type="submit">Signup</button>
+        </form>
+        <a href="/login">Already have an account? Login</a>
+    </div>
+</body>
+</html>

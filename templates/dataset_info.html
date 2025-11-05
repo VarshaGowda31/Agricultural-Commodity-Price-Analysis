@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CropCast - Dataset Info</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Dataset Overview</h1>
+    </header>
+
+    <div class="container">
+        <p><strong>Total Records:</strong> {{ row_count }}</p>
+        <p><strong>Columns:</strong></p>
+        <ul>
+            {% for col in columns %}
+                <li>{{ col }}</li>
+            {% endfor %}
+        </ul>
+        <a href="/">← Back to Home</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CropCast - Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>🌾 CropCast</h1>
+    </header>
+
+    <div class="container">
+        <h2>Welcome, {{ username }}!</h2>
+        <p>Predict Commodity Prices Easily</p>
+        <form action="/predict" method="post">
+            <select name="state" required>
+                <option value="">Select State</option>
+                {% for state in states %}
+                    <option value="{{ state }}">{{ state }}</option>
+                {% endfor %}
+            </select>
+
+            <select name="commodity" required>
+                <option value="">Select Commodity</option>
+                {% for commodity in commodities %}
+                    <option value="{{ commodity }}">{{ commodity }}</option>
+                {% endfor %}
+            </select>
+
+            <button type="submit">Predict Price 💰</button>
+        </form>
+
+        <a href="/dashboard">📊 View Dashboard</a>
+        <a href="/dataset-info">🗂️ Dataset Info</a>
+        <a href="/about">ℹ️ About CropCast</a>
+        <a href="/logout">🚪 Logout</a>
+    </div>
+</body>
+</html>

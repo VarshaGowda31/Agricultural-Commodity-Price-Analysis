@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CropCast - Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>💰 Predicted Price</h1>
+    </header>
+
+    <div class="container">
+        <p><strong>State:</strong> {{ state }}</p>
+        <p><strong>Commodity:</strong> {{ commodity }}</p>
+        <p><strong>Predicted Modal Price:</strong> ₹{{ price | round(2) }}</p>
+        <a href="/">← Back to Home</a>
+    </div>
+</body>
+</html>
